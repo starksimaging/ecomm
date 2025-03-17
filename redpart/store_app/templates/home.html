@@ -8,7 +8,9 @@
     <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
             <a href="{{ shoe.image.url }}">
-                <img src="{% thumbnail shoe.image 300x300 crop='center' %}" class="card-img-top" alt="{{ shoe.name }}">
+                {% thumbnail shoe.image "300x300" crop="center" as thumb %}
+                <img src="{{ thumb.url }}" class="card-img-top" alt="{{ shoe.name }}">
+                {% endthumbnail %}
             </a>
             <div class="card-body">
                 <h5 class="card-title">{{ shoe.name }}</h5>
