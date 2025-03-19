@@ -43,8 +43,12 @@ INSTALLED_APPS = [
 
     'store_app',  # Our store app
     'users',
+    'cart',
     'sorl.thumbnail',  # Thumbnail support
 ]
+
+
+CART_SESSION_ID = 'cart'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
